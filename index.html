@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deadwake Outfitters | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
+    <!-- Global Navigation -->
     <nav>
-        <div class="brand-logo" onclick="window.location.href='index.html'">DEADWAKE<span>.</span></div>
+        <div class="brand-logo" onclick="window.location.href='./index.html'">DEADWAKE<span>.</span></div>
         <div class="nav-links">
-            <a href="index.html" class="active">Home</a>
-            <a href="products.html">Shop Apparel</a>
+            <a href="./index.html" class="active">Home</a>
+            <a href="./products.html">Shop Apparel</a>
         </div>
         <div class="nav-actions">
             <button class="nav-btn" id="authNavBtn">Login / Signup</button>
@@ -22,28 +23,31 @@
         </div>
     </nav>
 
+    <!-- Hero Showcase Section -->
     <section class="hero main-hero">
         <h1>DEADWAKE OUTFITTERS</h1>
         <p>Premium Saltwater & Inshore Fishing Gear</p>
-        <button class="cta-btn" onclick="window.location.href='products.html'">Shop The Collection</button>
+        <button class="cta-btn" onclick="window.location.href='./products.html'">Shop The Collection</button>
     </section>
 
+    <!-- Highlights Section -->
     <section class="container">
         <h2 class="section-title">Explore Gear</h2>
         <div class="category-grid">
-            <div class="category-card" onclick="window.location.href='products.html'">
+            <div class="category-card" onclick="window.location.href='./products.html'">
                 <div class="category-icon">👕</div>
                 <h3>Performance Shirts</h3>
-                <p>UV Protection, breathable weaves made for long days on the water.</p>
+                <p>UV Protection, breathable weaves built for long days on the water.</p>
             </div>
-            <div class="category-card" onclick="window.location.href='products.html'">
+            <div class="category-card" onclick="window.location.href='./products.html'">
                 <div class="category-icon">🧢</div>
                 <h3>Headwear</h3>
-                <p>Durable snapbacks and technical hats built to survive the saltwater spray.</p>
+                <p>Durable snapbacks built to survive the salty ocean spray.</p>
             </div>
         </div>
     </section>
 
+    <!-- Global Authentication Modal -->
     <div class="modal-overlay" id="authModal">
         <div class="modal-window">
             <button class="modal-close" id="closeAuthBtn">&times;</button>
@@ -69,6 +73,7 @@
         </div>
     </div>
 
+    <!-- Global Shopping Cart Modal -->
     <div class="modal-overlay" id="cartModal">
         <div class="modal-window cart-window">
             <button class="modal-close" id="closeCartBtn">&times;</button>
@@ -82,6 +87,6 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
