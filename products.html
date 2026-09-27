@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadwake Outfitters | Shop Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <nav>
+        <div class="brand-logo" onclick="window.location.href='index.html'">DEADWAKE<span>.</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Shop Apparel</a>
+        </div>
+        <div class="nav-actions">
+            <button class="nav-btn" id="authNavBtn">Login / Signup</button>
+            <button class="nav-btn cart-icon-btn" id="cartNavBtn">
+                Cart 🛒
+                <span class="cart-badge" id="cartBadgeCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- INTERACTIVE ADMIN STOCK SIMULATOR PANEL -->
+    <div class="admin-panel" id="adminControlPanel">
+        <div class="admin-header">⚡ DEV MODE: INSTANT STOCK CONTROLLER</div>
+        <div class="admin-controls">
+            <div class="admin-field">
+                <label>Select Target Item:</label>
+                <select id="adminProductSelect">
+                    <option value="1">Premium Graphic Tee</option>
+                    <option value="2">Performance Longsleeve</option>
+                    <option value="3">DW Classic Hat</option>
+                </select>
+            </div>
+            <div class="admin-field">
+                <label>Target Variation Style:</label>
+                <select id="adminVariantSelect">
+                    <!-- Populated dynamically -->
+                </select>
+            </div>
+            <div class="admin-btn-group">
+                <button class="admin-btn stock-up" onclick="adjustAdminStock(5)">+5 Instantly</button>
+                <button class="admin-btn stock-zero" onclick="adjustAdminStock(0)">Set Out of Stock</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compact Catalog Header -->
+    <section class="hero compact-hero">
+        <h2>THE OFFICIAL LINE</h2>
+        <p>Fish Further • Stay Wild</p>
+    </section>
+
+    <!-- Product Grid Collection Layout -->
+    <main class="container">
+        <div class="product-grid">
+            
+            <!-- PRODUCT CARD 1 -->
+            <div class="product-card" id="prod-card-1">
+                <div class="out-of-stock-badge" id="soldout-badge-1" style="display: none;">Sold Out</div>
+                <div class="product-image-placeholder">👕</div>
+                <div class="product-details">
+                    <div class="product-title">Premium Deadwake Graphic Tee</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select class="color-select" id="color-1">
+                                <option value="Aqua">Aqua</option>
+                                <option value="White">White</option>
+                                <option value="Sage Green">Sage Green</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select class="size-select" id="size-1"></select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$34.99</div>
+                        <span class="inventory-tracker" id="tracker-1">Checking stock...</span>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-1">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- PRODUCT CARD 2 -->
+            <div class="product-card" id="prod-card-2">
+                <div class="out-of-stock-badge" id="soldout-badge-2" style="display: none;">Sold Out</div>
+                <div class="product-image-placeholder">🛡️</div>
+                <div class="product-details">
+                    <div class="product-title">Performance Longsleeve</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select class="color-select" id="color-2">
+                                <option value="Blue Camo">Blue Camo</option>
+                                <option value="White">White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select class="size-select" id="size-2"></select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$42.99</div>
+                        <span class="inventory-tracker" id="tracker-2">Checking stock...</span>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-2">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- PRODUCT CARD 3 -->
+            <div class="product-card" id="prod-card-3">
+                <div class="out-of-stock-badge" id="soldout-badge-3" style="display: none;">Sold Out</div>
+                <div class="product-image-placeholder">🧢</div>
+                <div class="product-details">
+                    <div class="product-title">DW Classic Snapback Hat</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select class="color-select" id="color-3">
+                                <option value="Black">Black</option>
+                                <option value="Blue Camo">Blue Camo</option>
+                                <option value="Charcoal">Charcoal</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select class="size-select" id="size-3">
+                                <option value="One Size">One Size</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$28.50</div>
+                        <span class="inventory-tracker" id="tracker-3">Checking stock...</span>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-3">Add To Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Shared Modals -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-window">
+            <button class="modal-close" id="closeAuthBtn">&times;</button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="loginTab">Login</button>
+                <button class="auth-tab" id="signupTab">Sign Up</button>
+            </div>
+            <form id="authForm">
+                <div class="form-group" id="usernameGroup" style="display: none;">
+                    <label for="authName">Full Name</label>
+                    <input type="text" id="authName" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="authEmail">Email Address</label>
+                    <input type="email" id="authEmail" required placeholder="name@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="authPassword">Password</label>
+                    <input type="password" id="authPassword" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="auth-submit-btn" id="authSubmitBtn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-window cart-window">
+            <button class="modal-close" id="closeCartBtn">&times;</button>
+            <h3 class="cart-title">Your Cart</h3>
+            <div class="cart-items-list" id="cartItemsContainer"></div>
+            <div class="cart-total-section">
+                <span>Total:</span>
+                <span id="cartTotalValue">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

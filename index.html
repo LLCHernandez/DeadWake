@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadwake Outfitters | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <nav>
+        <div class="brand-logo" onclick="window.location.href='index.html'">DEADWAKE<span>.</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="products.html">Shop Apparel</a>
+        </div>
+        <div class="nav-actions">
+            <button class="nav-btn" id="authNavBtn">Login / Signup</button>
+            <button class="nav-btn cart-icon-btn" id="cartNavBtn">
+                Cart 🛒
+                <span class="cart-badge" id="cartBadgeCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Page Hero Section -->
+    <section class="hero main-hero">
+        <h1>DEADWAKE OUTFITTERS</h1>
+        <p>Premium Saltwater & Inshore Fishing Gear</p>
+        <button class="cta-btn" onclick="window.location.href='products.html'">Shop The Collection</button>
+    </section>
+
+    <!-- Category Highlights Section -->
+    <section class="container feature-section">
+        <h2 class="section-title">Explore Gear</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="window.location.href='products.html'">
+                <div class="category-icon">👕</div>
+                <h3>Performance Shirts</h3>
+                <p>UV Protection, breathable weaves made for long days on the water.</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html'">
+                <div class="category-icon">🧢</div>
+                <h3>Headwear</h3>
+                <p>Durable snapbacks and technical hats built to survive the saltwater spray.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authentication Modal Overlay -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal-window">
+            <button class="modal-close" id="closeAuthBtn">&times;</button>
+            <div class="auth-tabs">
+                <button class="auth-tab active" id="loginTab">Login</button>
+                <button class="auth-tab" id="signupTab">Sign Up</button>
+            </div>
+            <form id="authForm">
+                <div class="form-group" id="usernameGroup" style="display: none;">
+                    <label for="authName">Full Name</label>
+                    <input type="text" id="authName" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="authEmail">Email Address</label>
+                    <input type="email" id="authEmail" required placeholder="name@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="authPassword">Password</label>
+                    <input type="password" id="authPassword" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="auth-submit-btn" id="authSubmitBtn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Interactive Shopping Cart Overlay -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-window cart-window">
+            <button class="modal-close" id="closeCartBtn">&times;</button>
+            <h3 class="cart-title">Your Cart</h3>
+            <div class="cart-items-list" id="cartItemsContainer"></div>
+            <div class="cart-total-section">
+                <span>Total:</span>
+                <span id="cartTotalValue">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
