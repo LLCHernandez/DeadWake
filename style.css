@@ -386,6 +386,7 @@ nav {
     color: white;
 }
 
+/* --- MODALS LAYOUT LAYER CORRECTIONS --- */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -398,13 +399,18 @@ nav {
     align-items: center;
     z-index: 200;
     opacity: 0;
-    pointer-events: none;
+    
+    /* CRITICAL FIX: Allows clicks to pass through the invisible overlay wall */
+    pointer-events: none; 
+    
     transition: opacity 0.2s ease;
 }
 
 .modal-overlay.active {
     opacity: 1;
-    pointer-events: auto;
+    
+    /* CRITICAL FIX: Restores click capturing when the modal is actively visible */
+    pointer-events: auto; 
 }
 
 .modal-window {
