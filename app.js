@@ -57,6 +57,7 @@ function init() {
         localStorage.setItem('dw_stock', JSON.stringify(inventoryData));
     }
 
+    // SAFE COMPATIBILITY CHECK: Look for color-1 element to know if we are on the shop page
     const detailsExist = document.getElementById('color-1');
     if (detailsExist) {
         activeProductIds.forEach(idStr => {
@@ -100,7 +101,6 @@ function updateSizeOptions(id) {
     sizeSelect.innerHTML = availableSizes.map(size => `<option value="${size}">${size}</option>`).join('');
 }
 
-// Fixed bracket reference issue from prior loops
 function updateStockUI(id) {
     const item = currentStockData[id];
     const card = document.getElementById(`prod-card-${id}`);
@@ -298,15 +298,21 @@ function updateUserNavbarUI() {
     const authBtn = document.getElementById('authNavBtn');
     if(authBtn) {
         if(loggedInUser) {
-            authBtn.innerText = `Hi, ${loggedInUser} (Logout)`;
-        } else {authBtn.innerText = "Login / Signup";
+            authBtn.innerText = `Hi, ${loggedInUser} (Logout)`;} else {
+authBtn.innerText = "Login / Signup";
 }
 }
 }
 function setupModals() {
 const authModal = document.getElementById('authModal');
 const cartModal = document.getElementById('cartModal');
-document.getElementById('authNavBtn').addEventListener('click', () => {
+const authNavBtn = document.getElementById('authNavBtn');
+const cartNavBtn = document.getElementById('cartNavBtn');
+const closeAuthBtn = document.getElementById('closeAuthBtn');
+const closeCartBtn = document.getElementById('closeCartBtn');
+// SAFE REGISTRATION: Explicit presence verification gates before click binds
+if(authNavBtn) {
+authNavBtn.addEventListener('click', () => {
 if(loggedInUser) {
 localStorage.removeItem('dw_user');
 localStorage.removeItem('dw_user_role');
@@ -316,16 +322,24 @@ updateUserNavbarUI();
 checkAdminPrivileges();
 alert("Logged out successfully.");
 } else {
-authModal.classList.add('active');
+if(authModal) authModal.classList.add('active');
 }
 });
-document.getElementById('cartNavBtn').addEventListener('click', () => cartModal.classList.add('active'));
-document.getElementById('closeAuthBtn').addEventListener('click', () => authModal.classList.remove('active'));
-document.getElementById('closeCartBtn').addEventListener('click', () => cartModal.classList.remove('active'));
+}
+if(cartNavBtn && cartModal) {
+cartNavBtn.addEventListener('click', () => cartModal.classList.add('active'));
+}
+if(closeAuthBtn && authModal) {
+closeAuthBtn.addEventListener('click', () => authModal.classList.remove('active'));
+}
+if(closeCartBtn && cartModal) {
+closeCartBtn.addEventListener('click', () => cartModal.classList.remove('active'));
+}
 const loginTab = document.getElementById('loginTab');
 const signupTab = document.getElementById('signupTab');
 const usernameGroup = document.getElementById('usernameGroup');
 const authSubmitBtn = document.getElementById('authSubmitBtn');
+if(loginTab && signupTab && usernameGroup && authSubmitBtn) {
 loginTab.addEventListener('click', () => {
 loginTab.classList.add('active');
 signupTab.classList.remove('active');
@@ -338,7 +352,10 @@ loginTab.classList.remove('active');
 usernameGroup.style.display = 'block';
 authSubmitBtn.innerText = 'Create Account';
 });
-document.getElementById('authForm').addEventListener('submit', (e) => {
+}
+const authForm = document.getElementById('authForm');
+if(authForm) {
+authForm.addEventListener('submit', (e) => {
 e.preventDefault();
 const email = document.getElementById('authEmail').value.trim().toLowerCase();
 const password = document.getElementById('authPassword').value;
@@ -354,7 +371,7 @@ alert("Access Denied: Incorrect administrator password sequence entered.");
 return;
 }
 } else {
-loggedInUser = email.split('@');
+loggedInUser = email.split('@')[0];
 localStorage.setItem('dw_user', loggedInUser);
 localStorage.setItem('dw_user_role', 'customer');
 localStorage.setItem('dw_user_raw', email);
@@ -362,9 +379,12 @@ alert(Logged in successfully as ${loggedInUser}.);
 }
 updateUserNavbarUI();
 checkAdminPrivileges();
-authModal.classList.remove('active');
+if(authModal) authModal.classList.remove('active');
 });
-document.getElementById('checkoutBtn').addEventListener('click', () => {
+}
+const checkoutBtn = document.getElementById('checkoutBtn');
+if(checkoutBtn) {
+checkoutBtn.addEventListener('click', () => {
 if(cart.length === 0) {
 alert("Cart is empty!");
 return;
@@ -378,12 +398,13 @@ localStorage.setItem('dw_stock', JSON.stringify(currentStockData));
 alert(loggedInUser ? Thanks for your purchase, ${loggedInUser}! : "Order processed as guest customer!");
 cart = [];
 syncAndSaveCartState();
-cartModal.classList.remove('active');
+if(cartModal) cartModal.classList.remove('active');
 if (document.getElementById('color-1')) {
 activeProductIds.forEach(idStr => updateStockUI(parseInt(idStr)));
 }
 if(document.getElementById('adminVariantSelect')) populateAdminVariants();
 });
 }
-// Run initialization line directly
+}
+// Fire application modules cleanly
 init();
