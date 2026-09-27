@@ -23,7 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-/* NAVIGATION */
 nav {
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--border);
@@ -101,7 +100,6 @@ nav {
     border-radius: 10px;
 }
 
-/* HERO DESIGNS */
 .hero {
     text-align: center;
     display: flex;
@@ -148,7 +146,6 @@ nav {
     background-color: var(--primary-hover);
 }
 
-/* CORE STORE CONTAINER LAYOUTS */
 .container {
     max-width: 1200px;
     margin: 3rem auto;
@@ -162,7 +159,6 @@ nav {
     letter-spacing: 1px;
 }
 
-/* CATEGORY LINK DECK IN HOME */
 .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -199,7 +195,6 @@ nav {
     font-size: 0.95rem;
 }
 
-/* PRODUCT SHIFTING CARDS */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -326,7 +321,6 @@ nav {
     z-index: 10;
 }
 
-/* DEV CONTROLLER DOCK STYLES */
 .admin-panel {
     display: none; 
     background-color: #1a2635;
@@ -392,7 +386,6 @@ nav {
     color: white;
 }
 
-/* MODALS DESIGN */
 .modal-overlay {
     position: fixed;
     top: 0;

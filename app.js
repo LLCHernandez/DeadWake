@@ -52,38 +52,38 @@ let cart = JSON.parse(localStorage.getItem('dw_cart')) || [];
 let loggedInUser = localStorage.getItem('dw_user') || null;
 let currentStockData = JSON.parse(localStorage.getItem('dw_stock')) || inventoryData;
 
+// ULTRA-SAFE EVENT ATTACHMENT UTILITY
+function safeAddListener(id, event, callback) {
+    const el = document.getElementById(id);
+    if (el) {
+        el.addEventListener(event, callback);
+    }
+}
+
 function init() {
     if (!localStorage.getItem('dw_stock')) {
         localStorage.setItem('dw_stock', JSON.stringify(inventoryData));
     }
 
-    // SAFE COMPATIBILITY CHECK: Look for color-1 element to know if we are on the shop page
-    const detailsExist = document.getElementById('color-1');
-    if (detailsExist) {
+    // Bind Product-specific grid elements (only runs if elements are present on products.html)
+    if (document.getElementById('color-1')) {
         activeProductIds.forEach(idStr => {
             const id = parseInt(idStr);
-            const colorSelect = document.getElementById(`color-${id}`);
-            if(colorSelect) {
-                colorSelect.addEventListener('change', () => {
-                    updateSizeOptions(id);
-                    updateStockUI(id);
-                });
+            
+            safeAddListener(`color-${id}`, 'change', () => {
                 updateSizeOptions(id);
                 updateStockUI(id);
-            }
+            });
 
-            const sizeSelect = document.getElementById(`size-${id}`);
-            if(sizeSelect) {
-                sizeSelect.addEventListener('change', () => updateStockUI(id));
-            }
+            safeAddListener(`size-${id}`, 'change', () => updateStockUI(id));
+            safeAddListener(`btn-${id}`, 'click', () => handleAddToCart(id));
 
-            const btn = document.getElementById(`btn-${id}`);
-            if(btn) {
-                btn.addEventListener('click', () => handleAddToCart(id));
-            }
+            updateSizeOptions(id);
+            updateStockUI(id);
         });
     }
 
+    // Build Global Modal Bindings across all tabs safely without crashing if an asset disappears
     setupModals();
     checkAdminPrivileges(); 
     renderCart();
@@ -298,21 +298,15 @@ function updateUserNavbarUI() {
     const authBtn = document.getElementById('authNavBtn');
     if(authBtn) {
         if(loggedInUser) {
-            authBtn.innerText = `Hi, ${loggedInUser} (Logout)`;} else {
-authBtn.innerText = "Login / Signup";
+            authBtn.innerText = `Hi, ${loggedInUser} (Logout)`;
+        } else {authBtn.innerText = "Login / Signup";
 }
 }
 }
 function setupModals() {
 const authModal = document.getElementById('authModal');
 const cartModal = document.getElementById('cartModal');
-const authNavBtn = document.getElementById('authNavBtn');
-const cartNavBtn = document.getElementById('cartNavBtn');
-const closeAuthBtn = document.getElementById('closeAuthBtn');
-const closeCartBtn = document.getElementById('closeCartBtn');
-// SAFE REGISTRATION: Explicit presence verification gates before click binds
-if(authNavBtn) {
-authNavBtn.addEventListener('click', () => {
+safeAddListener('authNavBtn', 'click', () => {
 if(loggedInUser) {
 localStorage.removeItem('dw_user');
 localStorage.removeItem('dw_user_role');
@@ -325,16 +319,9 @@ alert("Logged out successfully.");
 if(authModal) authModal.classList.add('active');
 }
 });
-}
-if(cartNavBtn && cartModal) {
-cartNavBtn.addEventListener('click', () => cartModal.classList.add('active'));
-}
-if(closeAuthBtn && authModal) {
-closeAuthBtn.addEventListener('click', () => authModal.classList.remove('active'));
-}
-if(closeCartBtn && cartModal) {
-closeCartBtn.addEventListener('click', () => cartModal.classList.remove('active'));
-}
+safeAddListener('cartNavBtn', 'click', () => { if(cartModal) cartModal.classList.add('active'); });
+safeAddListener('closeAuthBtn', 'click', () => { if(authModal) authModal.classList.remove('active'); });
+safeAddListener('closeCartBtn', 'click', () => { if(cartModal) cartModal.classList.remove('active'); });
 const loginTab = document.getElementById('loginTab');
 const signupTab = document.getElementById('signupTab');
 const usernameGroup = document.getElementById('usernameGroup');
@@ -406,5 +393,5 @@ if(document.getElementById('adminVariantSelect')) populateAdminVariants();
 });
 }
 }
-// Fire application modules cleanly
+// Run loop functions immediately
 init();
