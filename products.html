@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Shared Navigation Bar -->
     <nav>
         <div class="brand-logo" onclick="window.location.href='index.html'">DEADWAKE<span>.</span></div>
         <div class="nav-links">
@@ -18,18 +17,16 @@
         <div class="nav-actions">
             <button class="nav-btn" id="authNavBtn">Login / Signup</button>
             <button class="nav-btn cart-icon-btn" id="cartNavBtn">
-                Cart 🛒
-                <span class="cart-badge" id="cartBadgeCount">0</span>
+                Cart 🛒 <span class="cart-badge" id="cartBadgeCount">0</span>
             </button>
         </div>
     </nav>
 
-    <!-- INTERACTIVE ADMIN STOCK SIMULATOR PANEL -->
-    <div class="admin-panel" id="adminControlPanel">
-        <div class="admin-header">⚡ DEV MODE: INSTANT STOCK CONTROLLER</div>
-        <div class="admin-controls">
+    <div class="admin-panel" id="adminControlPanel" style="display: none; background-color: #1a2635; padding: 1rem 2rem; border-bottom: 2px solid #ff7043;">
+        <div style="color: #ff7043; font-size: 0.85rem; font-weight: 800; letter-spacing: 1px;">⚡ DEV MODE: INSTANT STOCK CONTROLLER</div>
+        <div class="admin-controls" style="display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
             <div class="admin-field">
-                <label>Select Target Item:</label>
+                <label>Target Item:</label>
                 <select id="adminProductSelect">
                     <option value="1">Premium Graphic Tee</option>
                     <option value="2">Performance Longsleeve</option>
@@ -37,29 +34,23 @@
                 </select>
             </div>
             <div class="admin-field">
-                <label>Target Variation Style:</label>
-                <select id="adminVariantSelect">
-                    <!-- Populated dynamically -->
-                </select>
+                <label>Style Combination:</label>
+                <select id="adminVariantSelect"></select>
             </div>
-            <div class="admin-btn-group">
-                <button class="admin-btn stock-up" onclick="adjustAdminStock(5)">+5 Instantly</button>
-                <button class="admin-btn stock-zero" onclick="adjustAdminStock(0)">Set Out of Stock</button>
+            <div class="admin-btn-group" style="display: flex; gap: 0.5rem;">
+                <button class="admin-btn stock-up" style="background-color: #00bcd4; border: none; padding: 0.4rem 1rem; border-radius: 4px; font-weight: 700; cursor: pointer;" onclick="adjustAdminStock(5)">+5 Instantly</button>
+                <button class="admin-btn stock-zero" style="background-color: #ef5350; color: white; border: none; padding: 0.4rem 1rem; border-radius: 4px; font-weight: 700; cursor: pointer;" onclick="adjustAdminStock(0)">Set Out of Stock</button>
             </div>
         </div>
     </div>
 
-    <!-- Compact Catalog Header -->
     <section class="hero compact-hero">
         <h2>THE OFFICIAL LINE</h2>
         <p>Fish Further • Stay Wild</p>
     </section>
 
-    <!-- Product Grid Collection Layout -->
     <main class="container">
         <div class="product-grid">
-            
-            <!-- PRODUCT CARD 1 -->
             <div class="product-card" id="prod-card-1">
                 <div class="out-of-stock-badge" id="soldout-badge-1" style="display: none;">Sold Out</div>
                 <div class="product-image-placeholder">👕</div>
@@ -87,7 +78,6 @@
                 </div>
             </div>
 
-            <!-- PRODUCT CARD 2 -->
             <div class="product-card" id="prod-card-2">
                 <div class="out-of-stock-badge" id="soldout-badge-2" style="display: none;">Sold Out</div>
                 <div class="product-image-placeholder">🛡️</div>
@@ -114,7 +104,6 @@
                 </div>
             </div>
 
-            <!-- PRODUCT CARD 3 -->
             <div class="product-card" id="prod-card-3">
                 <div class="out-of-stock-badge" id="soldout-badge-3" style="display: none;">Sold Out</div>
                 <div class="product-image-placeholder">🧢</div>
@@ -143,11 +132,9 @@
                     <button class="add-to-cart-btn" id="btn-3">Add To Cart</button>
                 </div>
             </div>
-
         </div>
     </main>
 
-    <!-- Shared Modals -->
     <div class="modal-overlay" id="authModal">
         <div class="modal-window">
             <button class="modal-close" id="closeAuthBtn">&times;</button>

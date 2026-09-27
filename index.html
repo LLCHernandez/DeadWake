@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Shared Navigation Bar -->
     <nav>
         <div class="brand-logo" onclick="window.location.href='index.html'">DEADWAKE<span>.</span></div>
         <div class="nav-links">
@@ -18,21 +17,18 @@
         <div class="nav-actions">
             <button class="nav-btn" id="authNavBtn">Login / Signup</button>
             <button class="nav-btn cart-icon-btn" id="cartNavBtn">
-                Cart 🛒
-                <span class="cart-badge" id="cartBadgeCount">0</span>
+                Cart 🛒 <span class="cart-badge" id="cartBadgeCount">0</span>
             </button>
         </div>
     </nav>
 
-    <!-- Main Page Hero Section -->
     <section class="hero main-hero">
         <h1>DEADWAKE OUTFITTERS</h1>
         <p>Premium Saltwater & Inshore Fishing Gear</p>
         <button class="cta-btn" onclick="window.location.href='products.html'">Shop The Collection</button>
     </section>
 
-    <!-- Category Highlights Section -->
-    <section class="container feature-section">
+    <section class="container">
         <h2 class="section-title">Explore Gear</h2>
         <div class="category-grid">
             <div class="category-card" onclick="window.location.href='products.html'">
@@ -48,7 +44,6 @@
         </div>
     </section>
 
-    <!-- Authentication Modal Overlay -->
     <div class="modal-overlay" id="authModal">
         <div class="modal-window">
             <button class="modal-close" id="closeAuthBtn">&times;</button>
@@ -74,7 +69,6 @@
         </div>
     </div>
 
-    <!-- Interactive Shopping Cart Overlay -->
     <div class="modal-overlay" id="cartModal">
         <div class="modal-window cart-window">
             <button class="modal-close" id="closeCartBtn">&times;</button>
