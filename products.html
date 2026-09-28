@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deadwake Outfitters | Shop Products</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
@@ -23,16 +23,25 @@
         </div>
     </nav>
 
-    <!-- ADMIN ENGINE DOCK -->
-    <div class="admin-panel" id="adminControlPanel">
+    <!-- Admin Panel Control Panel -->
+    <div id="adminControlPanel" class="admin-panel">
         <div class="admin-header">⚡ DEV MODE: INSTANT STOCK CONTROLLER</div>
         <div class="admin-controls">
             <div class="admin-field">
                 <label>Target Item:</label>
                 <select id="adminProductSelect">
-                    <option value="1">Premium Graphic Tee</option>
+                    <option value="1">Premium Cotton Tee</option>
                     <option value="2">Performance Longsleeve</option>
-                    <option value="3">DW Classic Hat</option>
+                    <option value="3">Premium Hoodie</option>
+                    <option value="4">Performance Tee</option>
+                    <option value="5">Comfort Shorts</option>
+                    <option value="6">Comfort Pants</option>
+                    <option value="7">?</option>
+                    <option value="8">?</option>
+                    <option value="9">Limited Edition Backpack</option>
+                    <option value="10">UV Protection Sunglasses</option>
+                    <option value="11">Stainless Steel Tumbler</option>
+                    <option value="12">Truckers Hat</option>
                 </select>
             </div>
             <div class="admin-field">
@@ -46,143 +55,553 @@
         </div>
     </div>
 
-    <!-- Header Section -->
-    <section class="hero compact-hero">
-        <h2>THE OFFICIAL LINE</h2>
+    <div class="hero compact-hero">
+        <h1>THE OFFICIAL LINE</h1>
         <p>Fish Further • Stay Wild</p>
-    </section>
+    </div>
 
-    <!-- Grid Array Container -->
-    <main class="container">
+    <div class="container">
         <div class="product-grid">
-            
-            <!-- PRODUCT CARD 1 -->
+            <!-- Product 1 -->
             <div class="product-card" id="prod-card-1">
-                <div class="out-of-stock-badge" id="soldout-badge-1" style="display: none;">Sold Out</div>
-                <div class="product-image-placeholder">👕</div>
+                <div class="out-of-stock-badge" id="soldout-badge-1" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
                 <div class="product-details">
-                    <div class="product-title">Premium Deadwake Graphic Tee</div>
+                    <div class="product-title">Premium Cotton Tee</div>
                     <div class="variant-selectors">
                         <div class="selector-group">
                             <label>Color</label>
-                            <select class="color-select" id="color-1">
-                                <option value="Aqua">Aqua</option>
-                                <option value="White">White</option>
-                                <option value="Sage Green">Sage Green</option>
+                            <select id="color-1">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Barnacle Brown">Barnacle Brown</option>
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Sulfur Yellow">Sulfur Yellow</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Chromis Teal">Chromis Teal</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Gurry Green">Gurry Green</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
                             </select>
                         </div>
                         <div class="selector-group">
                             <label>Size</label>
-                            <select class="size-select" id="size-1"></select>
+                            <select id="size-1">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra Large</option>
+                                <option value="2XL">2X</option>
+                            </select>
                         </div>
                     </div>
                     <div class="product-meta">
-                        <div class="product-price">$34.99</div>
-                        <span class="inventory-tracker" id="tracker-1">Checking stock...</span>
+                        <div class="product-price">$35</div>
+                        <div class="inventory-tracker" id="tracker-1">Checking stock...</div>
                     </div>
                     <button class="add-to-cart-btn" id="btn-1">Add To Cart</button>
                 </div>
             </div>
 
-            <!-- PRODUCT CARD 2 -->
+            <!-- Product 2 -->
             <div class="product-card" id="prod-card-2">
-                <div class="out-of-stock-badge" id="soldout-badge-2" style="display: none;">Sold Out</div>
-                <div class="product-image-placeholder">🛡️</div>
+                <div class="out-of-stock-badge" id="soldout-badge-2" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
                 <div class="product-details">
                     <div class="product-title">Performance Longsleeve</div>
                     <div class="variant-selectors">
                         <div class="selector-group">
                             <label>Color</label>
-                            <select class="color-select" id="color-2">
-                                <option value="Blue Camo">Blue Camo</option>
-                                <option value="White">White</option>
+                            <select id="color-2">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Barnacle Brown">Barnacle Brown</option>
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Sulfur Yellow">Sulfur Yellow</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Chromis Teal">Chromis Teal</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Gurry Green">Gurry Green</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
                             </select>
                         </div>
                         <div class="selector-group">
                             <label>Size</label>
-                            <select class="size-select" id="size-2"></select>
+                            <select id="size-2">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra Large</option>
+                                <option value="2XL">2X</option>
+                            </select>
                         </div>
                     </div>
                     <div class="product-meta">
-                        <div class="product-price">$42.99</div>
-                        <span class="inventory-tracker" id="tracker-2">Checking stock...</span>
+                        <div class="product-price">$30</div>
+                        <div class="inventory-tracker" id="tracker-2">Checking stock...</div>
                     </div>
                     <button class="add-to-cart-btn" id="btn-2">Add To Cart</button>
                 </div>
             </div>
 
-            <!-- PRODUCT CARD 3 -->
+            <!-- Product 3 -->
             <div class="product-card" id="prod-card-3">
-                <div class="out-of-stock-badge" id="soldout-badge-3" style="display: none;">Sold Out</div>
-                <div class="product-image-placeholder">🧢</div>
+                <div class="out-of-stock-badge" id="soldout-badge-3" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
                 <div class="product-details">
-                    <div class="product-title">DW Classic Snapback Hat</div>
+                    <div class="product-title">Premium Hoodie</div>
                     <div class="variant-selectors">
                         <div class="selector-group">
                             <label>Color</label>
-                            <select class="color-select" id="color-3">
-                                <option value="Black">Black</option>
-                                <option value="Blue Camo">Blue Camo</option>
-                                <option value="Charcoal">Charcoal</option>
+                            <select id="color-3">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Barnacle Brown">Barnacle Brown</option>
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Sulfur Yellow">Sulfur Yellow</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Chromis Teal">Chromis Teal</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Gurry Green">Gurry Green</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
                             </select>
                         </div>
                         <div class="selector-group">
                             <label>Size</label>
-                            <select class="size-select" id="size-3">
-                                <option value="One Size">One Size</option>
+                            <select id="size-3">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra Large</option>
+                                <option value="2XL">2X</option>
                             </select>
                         </div>
                     </div>
                     <div class="product-meta">
-                        <div class="product-price">$28.50</div>
-                        <span class="inventory-tracker" id="tracker-3">Checking stock...</span>
+                        <div class="product-price">$50</div>
+                        <div class="inventory-tracker" id="tracker-3">Checking stock...</div>
                     </div>
                     <button class="add-to-cart-btn" id="btn-3">Add To Cart</button>
                 </div>
             </div>
 
-        </div>
-    </main>
+            <!-- Product 4 -->
+            <div class="product-card" id="prod-card-4">
+                <div class="out-of-stock-badge" id="soldout-badge-4" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">Performance Tee</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-4">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Barnacle Brown">Barnacle Brown</option>
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Sulfur Yellow">Sulfur Yellow</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Chromis Teal">Chromis Teal</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Gurry Green">Gurry Green</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-4">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra Large</option>
+                                <option value="2XL">2X</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$25</div>
+                        <div class="inventory-tracker" id="tracker-4">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-4">Add To Cart</button>
+                </div>
+            </div>
 
-    <!-- Global Modals Section Links -->
-    <div class="modal-overlay" id="authModal">
+            <!-- Product 5 -->
+            <div class="product-card" id="prod-card-5">
+                <div class="out-of-stock-badge" id="soldout-badge-5" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">Comfort Shorts</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-5">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Barnacle Brown">Barnacle Brown</option>
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Sulfur Yellow">Sulfur Yellow</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Chromis Teal">Chromis Teal</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Gurry Green">Gurry Green</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-5">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra Large</option>
+                                <option value="2XL">2X</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$25</div>
+                        <div class="inventory-tracker" id="tracker-5">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-5">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" id="prod-card-6">
+                <div class="out-of-stock-badge" id="soldout-badge-6" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">Comfort Pants</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-6">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Barnacle Brown">Barnacle Brown</option>
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Sulfur Yellow">Sulfur Yellow</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Chromis Teal">Chromis Teal</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Gurry Green">Gurry Green</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-6">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra Large</option>
+                                <option value="2XL">2X</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$55</div>
+                        <div class="inventory-tracker" id="tracker-6">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-6">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card" id="prod-card-7">
+                <div class="out-of-stock-badge" id="soldout-badge-7" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">?</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-7">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Barnacle Brown">Barnacle Brown</option>
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Sulfur Yellow">Sulfur Yellow</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Chromis Teal">Chromis Teal</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Gurry Green">Gurry Green</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-7">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra Large</option>
+                                <option value="2XL">2X</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$110.00</div>
+                        <div class="inventory-tracker" id="tracker-7">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-7">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card" id="prod-card-8">
+                <div class="out-of-stock-badge" id="soldout-badge-8" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">?</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-8">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Barnacle Brown">Barnacle Brown</option>
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Sulfur Yellow">Sulfur Yellow</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Chromis Teal">Chromis Teal</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Gurry Green">Gurry Green</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-8">
+                                <option value="S">Small</option>
+                                <option value="M">Medium</option>
+                                <option value="L">Large</option>
+                                <option value="XL">Extra Large</option>
+                                <option value="2XL">2X</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$89.99</div>
+                        <div class="inventory-tracker" id="tracker-8">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-8">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card" id="prod-card-9">
+                <div class="out-of-stock-badge" id="soldout-badge-9" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">Limited Edition Backpack</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-9">
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-9">
+                                <option value="L">Limited</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$120</div>
+                        <div class="inventory-tracker" id="tracker-9">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-9">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card" id="prod-card-10">
+                <div class="out-of-stock-badge" id="soldout-badge-10" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">UV Protection Sunglasses</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-10">
+                                <option value="Dragonet Red">Dragonet Red</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-10">
+                                <option value="L">Standard</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$50</div>
+                        <div class="inventory-tracker" id="tracker-10">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-10">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card" id="prod-card-11">
+                <div class="out-of-stock-badge" id="soldout-badge-11" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">Stainless Steel Tumbler</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-11">
+                                <option value="Sunburst Orange">Sunburst Orange</option>
+                                <option value="Anemone Pink">Anemone Pink</option>
+                                <option value="Hydrocoral Purple">Hydrocoral Purple</option>
+                                <option value="Mako Blue">Mako Blue</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-11">
+                                <option value="S">12oz</option>
+                                <option value="M">20oz</option>
+                                <option value="L">30oz</option>
+                                <option value="XL">30oz + Handle</option>
+                                <option value="2XL">40oz</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$35</div>
+                        <div class="inventory-tracker" id="tracker-11">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-11">Add To Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card" id="prod-card-12">
+                <div class="out-of-stock-badge" id="soldout-badge-12" style="display:none;">Sold Out</div>
+                <div class="product-image-placeholder"></div>
+                <div class="product-details">
+                    <div class="product-title">Truckers Hat</div>
+                    <div class="variant-selectors">
+                        <div class="selector-group">
+                            <label>Color</label>
+                            <select id="color-12">
+                                <option value="Ambush Camo">Ambush Camo</option>
+                                <option value="Grenadier Charcoal">Grenadier Charcoal</option>
+                                <option value="Nurse Tan">Nurse Tan</option>
+                                <option value="Hammerhead Gray">Hammerhead Gray</option>
+                                <option value="Abyssal Black">Abyssal Black</option>
+                                <option value="Great White">Great White</option>
+                            </select>
+                        </div>
+                        <div class="selector-group">
+                            <label>Size</label>
+                            <select id="size-12">
+                                <option value="L">One Size Fits Most</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-price">$25</div>
+                        <div class="inventory-tracker" id="tracker-12">Checking stock...</div>
+                    </div>
+                    <button class="add-to-cart-btn" id="btn-12">Add To Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal-overlay">
         <div class="modal-window">
-            <button class="modal-close" id="closeAuthBtn">&times;</button>
+            <button id="closeAuthBtn" class="modal-close">&times;</button>
             <div class="auth-tabs">
-                <button class="auth-tab active" id="loginTab">Login</button>
-                <button class="auth-tab" id="signupTab">Sign Up</button>
+                <button id="loginTab" class="auth-tab active">Login</button>
+                <button id="signupTab" class="auth-tab">Sign Up</button>
             </div>
             <form id="authForm">
                 <div class="form-group" id="usernameGroup" style="display: none;">
-                    <label for="authName">Full Name</label>
-                    <input type="text" id="authName" placeholder="John Doe">
+                    <label>Full Name</label>
+                    <input type="text" id="authName">
                 </div>
                 <div class="form-group">
-                    <label for="authEmail">Email Address</label>
-                    <input type="email" id="authEmail" required placeholder="name@domain.com">
+                    <label>Email Address</label>
+                    <input type="email" id="authEmail" required>
                 </div>
                 <div class="form-group">
-                    <label for="authPassword">Password</label>
-                    <input type="password" id="authPassword" required placeholder="••••••••">
+                    <label>Password</label>
+                    <input type="password" id="authPassword" required>
                 </div>
-                <button type="submit" class="auth-submit-btn" id="authSubmitBtn">Login</button>
+                <button type="submit" id="authSubmitBtn" class="auth-submit-btn">Login</button>
             </form>
         </div>
     </div>
 
-    <div class="modal-overlay" id="cartModal">
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal-overlay">
         <div class="modal-window cart-window">
-            <button class="modal-close" id="closeCartBtn">&times;</button>
+            <button id="closeCartBtn" class="modal-close">&times;</button>
             <h3 class="cart-title">Your Cart</h3>
-            <div class="cart-items-list" id="cartItemsContainer"></div>
+            <div id="cartItemsContainer"></div>
             <div class="cart-total-section">
                 <span>Total:</span>
                 <span id="cartTotalValue">$0.00</span>
             </div>
-            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
         </div>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

@@ -2,13 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deadwake Outfitters | Home</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Global Navigation -->
     <nav>
         <div class="brand-logo" onclick="window.location.href='index.html'">DEADWAKE<span>.</span></div>
         <div class="nav-links">
@@ -16,22 +13,20 @@
             <a href="products.html">Shop Apparel</a>
         </div>
         <div class="nav-actions">
-            <button class="nav-btn" id="authNavBtn">Login / Signup</button>
-            <button class="nav-btn cart-icon-btn" id="cartNavBtn">
-                Cart 🛒 <span class="cart-badge" id="cartBadgeCount">0</span>
+            <button id="authNavBtn" class="nav-btn">Login / Signup</button>
+            <button id="cartNavBtn" class="nav-btn cart-icon-btn">
+                Cart 🛒 <span id="cartBadgeCount" class="cart-badge">0</span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Showcase Section -->
-    <section class="hero main-hero">
+    <div class="hero main-hero">
         <h1>DEADWAKE OUTFITTERS</h1>
         <p>Premium Saltwater & Inshore Fishing Gear</p>
         <button class="cta-btn" onclick="window.location.href='products.html'">Shop The Collection</button>
-    </section>
+    </div>
 
-    <!-- Highlights Section -->
-    <section class="container">
+    <div class="container">
         <h2 class="section-title">Explore Gear</h2>
         <div class="category-grid">
             <div class="category-card" onclick="window.location.href='products.html'">
@@ -45,48 +40,48 @@
                 <p>Durable snapbacks built to survive the salty ocean spray.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Global Authentication Modal -->
-    <div class="modal-overlay" id="authModal">
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal-overlay">
         <div class="modal-window">
-            <button class="modal-close" id="closeAuthBtn">&times;</button>
+            <button id="closeAuthBtn" class="modal-close">&times;</button>
             <div class="auth-tabs">
-                <button class="auth-tab active" id="loginTab">Login</button>
-                <button class="auth-tab" id="signupTab">Sign Up</button>
+                <button id="loginTab" class="auth-tab active">Login</button>
+                <button id="signupTab" class="auth-tab">Sign Up</button>
             </div>
             <form id="authForm">
                 <div class="form-group" id="usernameGroup" style="display: none;">
-                    <label for="authName">Full Name</label>
-                    <input type="text" id="authName" placeholder="John Doe">
+                    <label>Full Name</label>
+                    <input type="text" id="authName">
                 </div>
                 <div class="form-group">
-                    <label for="authEmail">Email Address</label>
-                    <input type="email" id="authEmail" required placeholder="name@domain.com">
+                    <label>Email Address</label>
+                    <input type="email" id="authEmail" required>
                 </div>
                 <div class="form-group">
-                    <label for="authPassword">Password</label>
-                    <input type="password" id="authPassword" required placeholder="••••••••">
+                    <label>Password</label>
+                    <input type="password" id="authPassword" required>
                 </div>
-                <button type="submit" class="auth-submit-btn" id="authSubmitBtn">Login</button>
+                <button type="submit" id="authSubmitBtn" class="auth-submit-btn">Login</button>
             </form>
         </div>
     </div>
 
-    <!-- Global Shopping Cart Modal -->
-    <div class="modal-overlay" id="cartModal">
+    <!-- Cart Modal -->
+    <div id="cartModal" class="modal-overlay">
         <div class="modal-window cart-window">
-            <button class="modal-close" id="closeCartBtn">&times;</button>
+            <button id="closeCartBtn" class="modal-close">&times;</button>
             <h3 class="cart-title">Your Cart</h3>
-            <div class="cart-items-list" id="cartItemsContainer"></div>
+            <div id="cartItemsContainer"></div>
             <div class="cart-total-section">
                 <span>Total:</span>
                 <span id="cartTotalValue">$0.00</span>
             </div>
-            <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+            <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
         </div>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

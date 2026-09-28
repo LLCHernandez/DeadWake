@@ -1,43 +1,373 @@
-// --- CENTRAL DATA STORE ---
+// --- CENTRAL DATA STORE (UPDATED TO 12 ITEMS) ---
 const inventoryData = {
     1: {
-        name: "Premium Deadwake Graphic Tee",
+        name: "Premium Cotton Tee",
         price: 34.99,
-        sizes: {
-            "Aqua": ["S", "M", "L"],
-            "White": ["M", "L", "XL"],
-            "Sage Green": ["M", "XL"]
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Barnacle Brown":["S","M","L","XL","2XL"],
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Sulfur Yellow":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Chromis Teal":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Gurry Green":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
         },
         stock: {
-            "Aqua-S": 2, "Aqua-M": 5, "Aqua-L": 0,
-            "White-M": 4, "White-L": 3, "White-XL": 1,
-            "Sage Green-M": 8, "Sage Green-XL": 2
+            "Ambush Camo-S": 1,"Ambush Camo-M": 1,"Ambush Camo-L": 1,"Ambush Camo-XL": 1,"Ambush Camo-2XL": 1,
+            "Barnacle Brown-S": 1,"Barnacle Brown-M": 1,"Barnacle Brown-L": 1,"Barnacle Brown-XL": 1,"Barnacle Brown-2XL": 1,
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Sulfur Yellow-S": 1,"Sulfur Yellow-M": 1,"Sulfur Yellow-L": 1,"Sulfur Yellow-XL": 1,"Sulfur Yellow-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Dragonet Red-S": 1,"Dragonet Red-M": 1,"Dragonet Red-L": 1,"Dragonet Red-XL": 1,"Dragonet Red-2XL": 1,
+            "Chromis Teal-S": 1,"Chromis Teal-M": 1,"Chromis Teal-L": 1,"Chromis Teal-XL": 1,"Chromis Teal-2XL": 1,
+            "Grenadier Charcoal-S": 1,"Grenadier Charcoal-M": 1,"Grenadier Charcoal-L": 1,"Grenadier Charcoal-XL": 1,"Grenadier Charcoal-2XL": 1,
+            "Gurry Green-S": 1,"Gurry Green-M": 1,"Gurry Green-L": 1,"Gurry Green-XL": 1,"Gurry Green-2XL": 1,
+            "Nurse Tan-S": 1,"Nurse Tan-M": 1,"Nurse Tan-L": 1,"Nurse Tan-XL": 1,"Nurse Tan-2XL": 1,
+            "Hammerhead Gray-S": 1,"Hammerhead Gray-M": 1,"Hammerhead Gray-L": 1,"Hammerhead Gray-XL": 1,"Hammerhead Gray-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
         }
     },
     2: {
         name: "Performance Longsleeve",
         price: 42.99,
-        sizes: {
-            "Blue Camo": ["M", "L"],
-            "White": ["L", "XL"]
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Barnacle Brown":["S","M","L","XL","2XL"],
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Sulfur Yellow":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Chromis Teal":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Gurry Green":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
         },
         stock: {
-            "Blue Camo-M": 3, "Blue Camo-L": 4,
-            "White-L": 2, "White-XL": 0
+            "Ambush Camo-S": 1,"Ambush Camo-M": 1,"Ambush Camo-L": 1,"Ambush Camo-XL": 1,"Ambush Camo-2XL": 1,
+            "Barnacle Brown-S": 1,"Barnacle Brown-M": 1,"Barnacle Brown-L": 1,"Barnacle Brown-XL": 1,"Barnacle Brown-2XL": 1,
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Sulfur Yellow-S": 1,"Sulfur Yellow-M": 1,"Sulfur Yellow-L": 1,"Sulfur Yellow-XL": 1,"Sulfur Yellow-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Dragonet Red-S": 1,"Dragonet Red-M": 1,"Dragonet Red-L": 1,"Dragonet Red-XL": 1,"Dragonet Red-2XL": 1,
+            "Chromis Teal-S": 1,"Chromis Teal-M": 1,"Chromis Teal-L": 1,"Chromis Teal-XL": 1,"Chromis Teal-2XL": 1,
+            "Grenadier Charcoal-S": 1,"Grenadier Charcoal-M": 1,"Grenadier Charcoal-L": 1,"Grenadier Charcoal-XL": 1,"Grenadier Charcoal-2XL": 1,
+            "Gurry Green-S": 1,"Gurry Green-M": 1,"Gurry Green-L": 1,"Gurry Green-XL": 1,"Gurry Green-2XL": 1,
+            "Nurse Tan-S": 1,"Nurse Tan-M": 1,"Nurse Tan-L": 1,"Nurse Tan-XL": 1,"Nurse Tan-2XL": 1,
+            "Hammerhead Gray-S": 1,"Hammerhead Gray-M": 1,"Hammerhead Gray-L": 1,"Hammerhead Gray-XL": 1,"Hammerhead Gray-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
         }
     },
     3: {
-        name: "DW Classic Snapback Hat",
+        name: "Premium Hoodie",
         price: 28.50,
-        sizes: {
-            "Black": ["One Size"],
-            "Blue Camo": ["One Size"],
-            "Charcoal": ["One Size"]
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Barnacle Brown":["S","M","L","XL","2XL"],
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Sulfur Yellow":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Chromis Teal":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Gurry Green":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
         },
         stock: {
-            "Black-One Size": 5,
-            "Blue Camo-One Size": 0,
-            "Charcoal-One Size": 3
+            "Ambush Camo-S": 1,"Ambush Camo-M": 1,"Ambush Camo-L": 1,"Ambush Camo-XL": 1,"Ambush Camo-2XL": 1,
+            "Barnacle Brown-S": 1,"Barnacle Brown-M": 1,"Barnacle Brown-L": 1,"Barnacle Brown-XL": 1,"Barnacle Brown-2XL": 1,
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Sulfur Yellow-S": 1,"Sulfur Yellow-M": 1,"Sulfur Yellow-L": 1,"Sulfur Yellow-XL": 1,"Sulfur Yellow-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Dragonet Red-S": 1,"Dragonet Red-M": 1,"Dragonet Red-L": 1,"Dragonet Red-XL": 1,"Dragonet Red-2XL": 1,
+            "Chromis Teal-S": 1,"Chromis Teal-M": 1,"Chromis Teal-L": 1,"Chromis Teal-XL": 1,"Chromis Teal-2XL": 1,
+            "Grenadier Charcoal-S": 1,"Grenadier Charcoal-M": 1,"Grenadier Charcoal-L": 1,"Grenadier Charcoal-XL": 1,"Grenadier Charcoal-2XL": 1,
+            "Gurry Green-S": 1,"Gurry Green-M": 1,"Gurry Green-L": 1,"Gurry Green-XL": 1,"Gurry Green-2XL": 1,
+            "Nurse Tan-S": 1,"Nurse Tan-M": 1,"Nurse Tan-L": 1,"Nurse Tan-XL": 1,"Nurse Tan-2XL": 1,
+            "Hammerhead Gray-S": 1,"Hammerhead Gray-M": 1,"Hammerhead Gray-L": 1,"Hammerhead Gray-XL": 1,"Hammerhead Gray-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
+        }
+    },
+    4: {
+        name: "Performance Tee",
+        price: 64.99,
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Barnacle Brown":["S","M","L","XL","2XL"],
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Sulfur Yellow":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Chromis Teal":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Gurry Green":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
+        },
+        stock: {
+            "Ambush Camo-S": 1,"Ambush Camo-M": 1,"Ambush Camo-L": 1,"Ambush Camo-XL": 1,"Ambush Camo-2XL": 1,
+            "Barnacle Brown-S": 1,"Barnacle Brown-M": 1,"Barnacle Brown-L": 1,"Barnacle Brown-XL": 1,"Barnacle Brown-2XL": 1,
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Sulfur Yellow-S": 1,"Sulfur Yellow-M": 1,"Sulfur Yellow-L": 1,"Sulfur Yellow-XL": 1,"Sulfur Yellow-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Dragonet Red-S": 1,"Dragonet Red-M": 1,"Dragonet Red-L": 1,"Dragonet Red-XL": 1,"Dragonet Red-2XL": 1,
+            "Chromis Teal-S": 1,"Chromis Teal-M": 1,"Chromis Teal-L": 1,"Chromis Teal-XL": 1,"Chromis Teal-2XL": 1,
+            "Grenadier Charcoal-S": 1,"Grenadier Charcoal-M": 1,"Grenadier Charcoal-L": 1,"Grenadier Charcoal-XL": 1,"Grenadier Charcoal-2XL": 1,
+            "Gurry Green-S": 1,"Gurry Green-M": 1,"Gurry Green-L": 1,"Gurry Green-XL": 1,"Gurry Green-2XL": 1,
+            "Nurse Tan-S": 1,"Nurse Tan-M": 1,"Nurse Tan-L": 1,"Nurse Tan-XL": 1,"Nurse Tan-2XL": 1,
+            "Hammerhead Gray-S": 1,"Hammerhead Gray-M": 1,"Hammerhead Gray-L": 1,"Hammerhead Gray-XL": 1,"Hammerhead Gray-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
+        }
+    },
+    5: {
+        name: "Comfort Shorts",
+        price: 48.00,
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Barnacle Brown":["S","M","L","XL","2XL"],
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Sulfur Yellow":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Chromis Teal":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Gurry Green":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
+        },
+        stock: {
+            "Ambush Camo-S": 1,"Ambush Camo-M": 1,"Ambush Camo-L": 1,"Ambush Camo-XL": 1,"Ambush Camo-2XL": 1,
+            "Barnacle Brown-S": 1,"Barnacle Brown-M": 1,"Barnacle Brown-L": 1,"Barnacle Brown-XL": 1,"Barnacle Brown-2XL": 1,
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Sulfur Yellow-S": 1,"Sulfur Yellow-M": 1,"Sulfur Yellow-L": 1,"Sulfur Yellow-XL": 1,"Sulfur Yellow-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Dragonet Red-S": 1,"Dragonet Red-M": 1,"Dragonet Red-L": 1,"Dragonet Red-XL": 1,"Dragonet Red-2XL": 1,
+            "Chromis Teal-S": 1,"Chromis Teal-M": 1,"Chromis Teal-L": 1,"Chromis Teal-XL": 1,"Chromis Teal-2XL": 1,
+            "Grenadier Charcoal-S": 1,"Grenadier Charcoal-M": 1,"Grenadier Charcoal-L": 1,"Grenadier Charcoal-XL": 1,"Grenadier Charcoal-2XL": 1,
+            "Gurry Green-S": 1,"Gurry Green-M": 1,"Gurry Green-L": 1,"Gurry Green-XL": 1,"Gurry Green-2XL": 1,
+            "Nurse Tan-S": 1,"Nurse Tan-M": 1,"Nurse Tan-L": 1,"Nurse Tan-XL": 1,"Nurse Tan-2XL": 1,
+            "Hammerhead Gray-S": 1,"Hammerhead Gray-M": 1,"Hammerhead Gray-L": 1,"Hammerhead Gray-XL": 1,"Hammerhead Gray-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
+        }
+    },
+    6: {
+        name: "Comfort Pants",
+        price: 18.99,
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Barnacle Brown":["S","M","L","XL","2XL"],
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Sulfur Yellow":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Chromis Teal":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Gurry Green":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
+        },
+        stock: {
+            "Ambush Camo-S": 1,"Ambush Camo-M": 1,"Ambush Camo-L": 1,"Ambush Camo-XL": 1,"Ambush Camo-2XL": 1,
+            "Barnacle Brown-S": 1,"Barnacle Brown-M": 1,"Barnacle Brown-L": 1,"Barnacle Brown-XL": 1,"Barnacle Brown-2XL": 1,
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Sulfur Yellow-S": 1,"Sulfur Yellow-M": 1,"Sulfur Yellow-L": 1,"Sulfur Yellow-XL": 1,"Sulfur Yellow-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Dragonet Red-S": 1,"Dragonet Red-M": 1,"Dragonet Red-L": 1,"Dragonet Red-XL": 1,"Dragonet Red-2XL": 1,
+            "Chromis Teal-S": 1,"Chromis Teal-M": 1,"Chromis Teal-L": 1,"Chromis Teal-XL": 1,"Chromis Teal-2XL": 1,
+            "Grenadier Charcoal-S": 1,"Grenadier Charcoal-M": 1,"Grenadier Charcoal-L": 1,"Grenadier Charcoal-XL": 1,"Grenadier Charcoal-2XL": 1,
+            "Gurry Green-S": 1,"Gurry Green-M": 1,"Gurry Green-L": 1,"Gurry Green-XL": 1,"Gurry Green-2XL": 1,
+            "Nurse Tan-S": 1,"Nurse Tan-M": 1,"Nurse Tan-L": 1,"Nurse Tan-XL": 1,"Nurse Tan-2XL": 1,
+            "Hammerhead Gray-S": 1,"Hammerhead Gray-M": 1,"Hammerhead Gray-L": 1,"Hammerhead Gray-XL": 1,"Hammerhead Gray-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
+        }
+    },
+    7: {
+        name: "?",
+        price: 110.00,
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Barnacle Brown":["S","M","L","XL","2XL"],
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Sulfur Yellow":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Chromis Teal":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Gurry Green":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
+        },
+        stock: {
+            "Ambush Camo-S": 1,"Ambush Camo-M": 1,"Ambush Camo-L": 1,"Ambush Camo-XL": 1,"Ambush Camo-2XL": 1,
+            "Barnacle Brown-S": 1,"Barnacle Brown-M": 1,"Barnacle Brown-L": 1,"Barnacle Brown-XL": 1,"Barnacle Brown-2XL": 1,
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Sulfur Yellow-S": 1,"Sulfur Yellow-M": 1,"Sulfur Yellow-L": 1,"Sulfur Yellow-XL": 1,"Sulfur Yellow-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Dragonet Red-S": 1,"Dragonet Red-M": 1,"Dragonet Red-L": 1,"Dragonet Red-XL": 1,"Dragonet Red-2XL": 1,
+            "Chromis Teal-S": 1,"Chromis Teal-M": 1,"Chromis Teal-L": 1,"Chromis Teal-XL": 1,"Chromis Teal-2XL": 1,
+            "Grenadier Charcoal-S": 1,"Grenadier Charcoal-M": 1,"Grenadier Charcoal-L": 1,"Grenadier Charcoal-XL": 1,"Grenadier Charcoal-2XL": 1,
+            "Gurry Green-S": 1,"Gurry Green-M": 1,"Gurry Green-L": 1,"Gurry Green-XL": 1,"Gurry Green-2XL": 1,
+            "Nurse Tan-S": 1,"Nurse Tan-M": 1,"Nurse Tan-L": 1,"Nurse Tan-XL": 1,"Nurse Tan-2XL": 1,
+            "Hammerhead Gray-S": 1,"Hammerhead Gray-M": 1,"Hammerhead Gray-L": 1,"Hammerhead Gray-XL": 1,"Hammerhead Gray-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
+        }
+    },
+    8: {
+        name: "?",
+        price: 89.99,
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Barnacle Brown":["S","M","L","XL","2XL"],
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Sulfur Yellow":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Chromis Teal":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Gurry Green":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
+        },
+        stock: {
+            "Ambush Camo-S": 1,"Ambush Camo-M": 1,"Ambush Camo-L": 1,"Ambush Camo-XL": 1,"Ambush Camo-2XL": 1,
+            "Barnacle Brown-S": 1,"Barnacle Brown-M": 1,"Barnacle Brown-L": 1,"Barnacle Brown-XL": 1,"Barnacle Brown-2XL": 1,
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Sulfur Yellow-S": 1,"Sulfur Yellow-M": 1,"Sulfur Yellow-L": 1,"Sulfur Yellow-XL": 1,"Sulfur Yellow-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Dragonet Red-S": 1,"Dragonet Red-M": 1,"Dragonet Red-L": 1,"Dragonet Red-XL": 1,"Dragonet Red-2XL": 1,
+            "Chromis Teal-S": 1,"Chromis Teal-M": 1,"Chromis Teal-L": 1,"Chromis Teal-XL": 1,"Chromis Teal-2XL": 1,
+            "Grenadier Charcoal-S": 1,"Grenadier Charcoal-M": 1,"Grenadier Charcoal-L": 1,"Grenadier Charcoal-XL": 1,"Grenadier Charcoal-2XL": 1,
+            "Gurry Green-S": 1,"Gurry Green-M": 1,"Gurry Green-L": 1,"Gurry Green-XL": 1,"Gurry Green-2XL": 1,
+            "Nurse Tan-S": 1,"Nurse Tan-M": 1,"Nurse Tan-L": 1,"Nurse Tan-XL": 1,"Nurse Tan-2XL": 1,
+            "Hammerhead Gray-S": 1,"Hammerhead Gray-M": 1,"Hammerhead Gray-L": 1,"Hammerhead Gray-XL": 1,"Hammerhead Gray-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
+        }
+    },
+    9: {
+        name: "Limited Edition Backpack",
+        price: 45.50,
+        sizes: {   
+                "Abyssal Black":["L"],
+                "Great White":["L"]
+        },
+        stock: {
+            "Abyssal Black-L": 1,
+            "Great White-L": 1,
+        }
+    },
+    10: {
+        name: "UV Protection Sunglasses",
+        price: 24.99,
+       sizes: {   
+                "Dragonet Red":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"]
+        },
+        stock: {
+            "Dragonet Red-L": 1,
+            "Mako Blue-L": 1,
+            "Abyssal Black-L": 1
+        }
+    },
+    11: {
+        name: "Stainless Steel Tumbler",
+        price: 58.00,
+        sizes: {   
+                "Sunburst Orange":["S","M","L","XL","2XL"],
+                "Anemone Pink":["S","M","L","XL","2XL"],
+                "Hydrocoral Purple":["S","M","L","XL","2XL"],
+                "Mako Blue":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
+        },
+        stock: {
+            "Sunburst Orange-S": 1,"Sunburst Orange-M": 1,"Sunburst Orange-L": 1,"Sunburst Orange-XL": 1,"Sunburst Orange-2XL": 1,
+            "Anemone Pink-S": 1,"Anemone Pink-M": 1,"Anemone Pink-L": 1,"Anemone Pink-XL": 1,"Anemone Pink-2XL": 1,
+            "Hydrocoral Purple-S": 1,"Hydrocoral Purple-M": 1,"Hydrocoral Purple-L": 1,"Hydrocoral Purple-XL": 1,"Hydrocoral Purple-2XL": 1,
+            "Mako Blue-S": 1,"Mako Blue-M": 1,"Mako Blue-L": 1,"Mako Blue-XL": 1,"Mako Blue-2XL": 1,
+            "Abyssal Black-S": 1,"Abyssal Black-M": 1,"Abyssal Black-L": 1,"Abyssal Black-XL": 1,"Abyssal Black-2XL": 1,
+            "Great White-S": 1,"Great White-M": 1,"Great White-L": 1,"Great White-XL": 1,"Great White-2XL": 1
+        }
+    },
+    12: {
+        name: "Truckers Hat",
+        price: 26.00,
+        sizes: {   
+                "Ambush Camo":["S","M","L","XL","2XL"],
+                "Grenadier Charcoal":["S","M","L","XL","2XL"],
+                "Nurse Tan":["S","M","L","XL","2XL"],
+                "Hammerhead Gray":["S","M","L","XL","2XL"],
+                "Abyssal Black":["S","M","L","XL","2XL"],
+                "Great White":["S","M","L","XL","2XL"]
+        },
+        stock: {
+            "Ambush Camo-L": 1,
+            "Grenadier Charcoal-L": 1,
+            "Nurse Tan-L": 1,
+            "Hammerhead Gray-L": 1,
+            "Abyssal Black-L": 1,
+            "Great White-L": 1
         }
     }
 };
@@ -60,6 +390,15 @@ function init() {
     setupProductCard(1);
     setupProductCard(2);
     setupProductCard(3);
+    setupProductCard(4);
+    setupProductCard(5);
+    setupProductCard(6);
+    setupProductCard(7);
+    setupProductCard(8);
+    setupProductCard(9);
+    setupProductCard(10);
+    setupProductCard(11);
+    setupProductCard(12);
 
     setupModals();
     checkAdminPrivileges(); 
@@ -90,6 +429,9 @@ function setupProductCard(id) {
 }
 
 function updateSizeOptions(id) {
+    // If it's the backpack, skip dynamic rewriting to preserve your static single choice
+    if (id === 9 || id === 10 || id === 11 || id === 12) return; 
+
     const item = currentStockData[id];
     const colorSelect = document.getElementById("color-" + id);
     const sizeSelect = document.getElementById("size-" + id);
@@ -97,9 +439,16 @@ function updateSizeOptions(id) {
     
     const color = colorSelect.value;
     const availableSizes = item.sizes[color] || [];
-    sizeSelect.innerHTML = availableSizes.map(function(size) {
-        return "<option value='" + size + "'>" + size + "</option>";
-    }).join('');
+    
+    if (availableSizes.length === 1 && availableSizes[0] === "Limited") {
+        sizeSelect.innerHTML = "<option value='Limited' selected>Limited</option>";
+        sizeSelect.style.display = "none"; 
+    } else {
+        sizeSelect.style.display = "inline-block"; 
+        sizeSelect.innerHTML = availableSizes.map(function(size) {
+            return "<option value='" + size + "'>" + size + "</option>";
+        }).join('');
+    }
 }
 
 function updateStockUI(id) {
@@ -291,6 +640,15 @@ cart = []; syncAndSaveCartState(); cartModal.classList.remove('active');
 updateStockUI(1);
 updateStockUI(2);
 updateStockUI(3);
+updateStockUI(4);
+updateStockUI(5);
+updateStockUI(6);
+updateStockUI(7);
+updateStockUI(8);
+updateStockUI(9);
+updateStockUI(10);
+updateStockUI(11);
+updateStockUI(12);
 if(document.getElementById('adminVariantSelect')) populateAdminVariants();
 });
 }

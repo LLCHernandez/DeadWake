@@ -192,7 +192,7 @@ nav {
     align-items: center;
     z-index: 200;
     opacity: 0;
-    pointer-events: none; /* Allows click transfers to pass through transparently */
+    pointer-events: none;
     transition: opacity 0.2s ease;
 }
 .modal-overlay.active { opacity: 1; pointer-events: auto; }
